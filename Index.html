@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="VITI Sens">
+<meta name="theme-color" content="#5D1F2B">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>VITI Sens · Carnet de terrain</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Geist:wght@300..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wine:#5D1F2B;--wine-deep:#3F1219;--wine-soft:#7A3645;
+  --chalk:#F4EEE3;--chalk-deep:#E6DBC8;--paper:#FBF7EE;--paper-line:#D9CFBA;
+  --ink:#1A1814;--ink-soft:#4A463D;--ink-faint:#8C8678;
+  --gold:#B08538;--leaf:#3D5236;--danger:#8B2D2D;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:'Geist',system-ui,sans-serif;background:var(--chalk);color:var(--ink);
+  min-height:100vh;min-height:100dvh;font-size:16px;line-height:1.5;overflow-x:hidden;
+  padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
+}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(140,134,120,.08) 1px,transparent 0);background-size:18px 18px;pointer-events:none;z-index:0}
+#app{position:relative;z-index:1;max-width:560px;margin:0 auto;padding:0 18px 100px;min-height:100vh;min-height:100dvh}
+.brand{display:flex;align-items:baseline;justify-content:space-between;padding:18px 0 22px;border-bottom:1px solid var(--paper-line);margin-bottom:24px}
+.logo{font-family:'Fraunces',serif;font-weight:500;font-size:26px;letter-spacing:-0.02em;color:var(--wine);font-style:italic}
+.logo b{font-weight:600;font-style:normal}
+.tagline{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);font-weight:500}
+h1{font-family:'Fraunces',serif;font-weight:500;font-size:28px;line-height:1.15;margin-bottom:8px;color:var(--ink);letter-spacing:-0.01em}
+h1 em{font-style:italic;color:var(--wine);font-weight:400}
+h3{font-size:13px;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-faint);font-weight:600;font-family:'Geist',sans-serif;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between}
+.subtitle{color:var(--ink-soft);font-size:14px;margin-bottom:22px}
+.ornament{display:flex;align-items:center;gap:14px;color:var(--ink-faint);margin:28px 0 18px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500}
+.ornament::before,.ornament::after{content:'';flex:1;height:1px;background:var(--paper-line)}
+.card{background:var(--paper);border:1px solid var(--paper-line);border-radius:14px;padding:18px;margin-bottom:14px;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+.field{margin-bottom:14px}.field:last-child{margin-bottom:0}
+label{display:block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+input[type=text],input[type=email],textarea,select,.sel-btn{
+  width:100%;padding:13px 14px;background:#fff;border:1px solid var(--paper-line);border-radius:9px;
+  font-family:inherit;font-size:16px;color:var(--ink);-webkit-appearance:none;appearance:none;transition:border-color .15s;
+}
+input:focus,textarea:focus{outline:none;border-color:var(--wine);box-shadow:0 0 0 3px rgba(93,31,43,.08)}
+textarea{resize:vertical;min-height:200px;line-height:1.6;padding-right:52px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sel-btn{cursor:pointer;display:flex;justify-content:space-between;align-items:center;text-align:left}
+.sel-btn.empty{color:var(--ink-faint)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border-radius:11px;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;border:none;width:100%;-webkit-appearance:none;transition:transform .08s,opacity .15s}
+.btn:active{transform:scale(.98)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.btn-p{background:var(--wine);color:#fff;margin-top:10px}
+.btn-s{background:#fff;color:var(--wine);border:1px solid var(--paper-line);margin-top:8px;font-size:14px}
+.btn-d{background:transparent;color:var(--danger);border:1px solid var(--paper-line);margin-top:10px;font-size:14px}
+.btn-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.drop{background:#fff;border:1px solid var(--paper-line);border-radius:9px;margin-top:3px;max-height:170px;overflow-y:auto;box-shadow:0 6px 18px rgba(0,0,0,.1);position:relative;z-index:5}
+.drop button{display:block;width:100%;padding:11px 14px;background:none;border:none;border-bottom:1px solid var(--paper-line);text-align:left;font-size:14px;color:var(--ink);cursor:pointer;font-family:inherit}
+.drop button:last-child{border-bottom:none}
+.drop button.active{background:rgba(93,31,43,.06);font-weight:700;color:var(--wine)}
+.hint{font-size:12px;color:var(--ink-faint);margin-top:6px;font-style:italic;font-family:'Fraunces',serif}
+.badge{display:inline-block;padding:2px 8px;border-radius:99px;background:var(--chalk-deep);color:var(--ink-soft);font-size:11px;font-weight:600}
+.error{background:#fbe9e9;border:1px solid #e8c4c4;color:var(--danger);padding:12px 14px;border-radius:9px;font-size:14px;margin-bottom:12px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;color:var(--wine);font-size:15px;font-weight:500;cursor:pointer;margin-bottom:14px;background:none;border:none;font-family:inherit;padding:6px 0}
+.top-bar{display:flex;justify-content:space-between;align-items:center;padding:14px 0;margin-bottom:8px}
+.save-btn{background:var(--wine);color:#fff;border:none;border-radius:9px;padding:8px 16px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}
+.bbch-sel{display:flex;align-items:center;padding:12px 14px;background:rgba(93,31,43,.04);border-radius:9px;margin-bottom:10px;border:1.5px solid var(--wine);gap:8px}
+.bbch-code{font-size:13px;font-weight:700;color:var(--wine);background:rgba(93,31,43,.08);padding:2px 8px;border-radius:6px}
+.bbch-x{background:none;border:none;color:var(--ink-faint);cursor:pointer;font-size:18px;padding:4px;margin-left:auto}
+.bbch-panel{background:#fff;border:1px solid var(--paper-line);border-radius:12px;margin-top:8px;padding:8px;box-shadow:0 6px 20px rgba(0,0,0,.1)}
+.bbch-scroll{max-height:250px;overflow-y:auto}
+.bbch-item{display:flex;align-items:center;gap:8px;width:100%;padding:9px 8px;background:none;border:none;border-bottom:1px solid var(--paper-line);text-align:left;cursor:pointer;border-radius:5px;font-family:inherit}
+.bbch-item.active{background:var(--wine);color:#fff}
+.bbch-ic{font-size:12px;font-weight:700;color:var(--wine);min-width:30px;text-align:center;background:rgba(93,31,43,.06);padding:2px 6px;border-radius:5px}
+.bbch-item.active .bbch-ic{background:rgba(255,255,255,.2);color:#fff}
+.meteo-row{display:flex;flex-wrap:wrap;gap:6px}
+.meteo-btn{padding:8px 12px;border-radius:18px;border:1px solid var(--paper-line);background:#fff;font-size:13px;cursor:pointer;font-family:inherit}
+.meteo-btn.active{background:rgba(93,31,43,.08);border-color:var(--wine);font-weight:600}
+.dict-hint{background:linear-gradient(135deg,#fbf3e3,#f5e9d0);border:1px solid var(--paper-line);border-radius:11px;padding:14px 16px;margin-bottom:12px;display:flex;gap:14px;align-items:flex-start}
+.dict-icon{flex-shrink:0;width:38px;height:38px;border-radius:10px;background:var(--wine);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px}
+.dict-text{font-size:13px;line-height:1.55;color:var(--ink-soft)}
+.dict-text b{color:var(--ink);font-weight:600}
+.ta-wrap{position:relative}
+.mic-btn{position:absolute;right:10px;bottom:10px;width:42px;height:42px;border-radius:50%;border:none;background:var(--wine);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px}
+.mic-btn.on{background:#c0392b;box-shadow:0 0 0 5px rgba(192,57,43,.16)}
+.rec-lbl{font-size:12px;color:#c0392b;font-weight:500;margin-top:4px}
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.photo-thumb{aspect-ratio:1;border-radius:8px;background:var(--chalk-deep) center/cover;position:relative;overflow:hidden}
+.photo-thumb .rm{position:absolute;top:4px;right:4px;width:24px;height:24px;border-radius:50%;background:rgba(0,0,0,.6);color:#fff;border:none;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.photo-add{aspect-ratio:1;border-radius:8px;border:1.5px dashed var(--paper-line);display:flex;align-items:center;justify-content:center;background:transparent;color:var(--ink-faint);font-size:22px;cursor:pointer;font-family:inherit}
+input[type=file]{display:none}
+.loader{display:flex;align-items:center;justify-content:center;gap:10px;padding:24px;color:var(--ink-soft)}
+.spinner{width:18px;height:18px;border:2px solid var(--paper-line);border-top-color:var(--wine);border-radius:50%;animation:spin .8s linear infinite;display:inline-block}
+.hist-item{background:var(--paper);border:1px solid var(--paper-line);border-radius:12px;padding:14px 16px;margin-bottom:10px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;transition:transform .08s}
+.hist-item:active{transform:scale(.99)}
+.hist-name{font-family:'Fraunces',serif;font-size:16px;color:var(--wine);font-weight:500}
+.hist-meta{font-size:12px;color:var(--ink-faint);margin-top:2px}
+.hist-arrow{color:var(--ink-faint);font-size:18px}
+.empty-state{text-align:center;padding:32px 16px;color:var(--ink-faint)}
+.empty-icon{font-family:'Fraunces',serif;font-size:42px;color:var(--paper-line);margin-bottom:8px;font-style:italic}
+.meta-bar{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--paper-line);gap:12px}
+.meta-who{font-family:'Fraunces',serif;font-size:17px;font-weight:500;color:var(--wine);flex:1}
+.meta-when{font-size:12px;color:var(--ink-faint);font-family:'Fraunces',serif;font-style:italic;white-space:nowrap}
+.synth-card{background:var(--wine);color:#fff;border:none;padding:20px;border-radius:14px;margin-bottom:18px}
+.synth-label{color:rgba(255,255,255,.65);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-bottom:8px}
+.synth-content{font-family:'Fraunces',serif;font-size:18px;line-height:1.4;font-weight:400}
+.rpt-label{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--wine);margin-bottom:8px}
+.sub-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sub-k{display:block;font-size:11px;color:var(--ink-faint);letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
+.sub-v{font-family:'Fraunces',serif;font-size:15px;color:var(--ink)}
+.rpt-li{padding:6px 0 6px 24px;position:relative;font-size:15px;line-height:1.55}
+.rpt-li-n{position:absolute;left:0;font-family:'Fraunces',serif;font-size:13px;color:var(--wine);font-weight:500}
+.san-item{margin-bottom:10px}
+.san-k{font-size:11px;color:var(--wine-soft);letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+.san-v{margin-top:2px;font-size:14px;line-height:1.6;color:var(--ink)}
+.rpt-content{font-size:14px;line-height:1.65;color:var(--ink)}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:var(--wine);color:#fff;padding:8px 20px;border-radius:20px;font-size:13px;font-weight:500;z-index:999;animation:toastIn .3s ease;box-shadow:0 4px 16px rgba(0,0,0,.15)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes toastIn{from{transform:translateX(-50%) translateY(12px);opacity:0}to{transform:translateX(-50%) translateY(0);opacity:1}}
+@media(max-width:380px){h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div id="app"><div class="loader"><div class="spinner"></div> Chargement…</div></div>
+<script>
+'use strict';
+
+const MAIL='florent.miguel@sasu-viti-sens.fr';
+const CEPAGES=['Chardonnay','Pinot Noir','Pinot Meunier','Pinot Blanc','Pinot Gris','Petit Meslier','Arbane'];
+const METEOS=['☀️ Soleil','⛅ Couvert','🌧️ Pluie','💨 Vent','🌫️ Brouillard','❄️ Gel'];
+const BBCH=[
+  {code:'00',short:'Dormance',label:'Repos hivernal – bourgeon d\'hiver'},
+  {code:'01',short:'Gonflement',label:'Début gonflement des bourgeons'},
+  {code:'05',short:'Bourre',label:'Stade bourre – bourgeon dans la bourre'},
+  {code:'07',short:'Débourrement',label:'Début du débourrement'},
+  {code:'09',short:'Pointe verte',label:'Débourrement – pointe verte'},
+  {code:'11',short:'1ère feuille',label:'1ère feuille étalée'},
+  {code:'13',short:'3 feuilles',label:'3 feuilles étalées'},
+  {code:'15',short:'Grappes visibles',label:'5 feuilles étalées – grappes visibles'},
+  {code:'17',short:'7 feuilles',label:'7 feuilles étalées'},
+  {code:'19',short:'9+ feuilles',label:'9 feuilles ou plus étalées'},
+  {code:'53',short:'Inflorescences',label:'Inflorescences nettement visibles'},
+  {code:'55',short:'Boutons agglomérés',label:'Inflorescences gonflées – boutons agglomérés'},
+  {code:'57',short:'Boutons séparés',label:'Inflorescences développées – boutons séparés'},
+  {code:'61',short:'Début floraison',label:'Début floraison – 10% capuchons tombés'},
+  {code:'65',short:'Pleine floraison',label:'Pleine floraison – 50% capuchons tombés'},
+  {code:'69',short:'Fin floraison',label:'Fin de la floraison'},
+  {code:'71',short:'Nouaison',label:'Nouaison – début formation des baies'},
+  {code:'73',short:'Grenaille',label:'Baies taille de grenaille (plomb)'},
+  {code:'75',short:'Petit pois',label:'Baies taille petit pois – grappe pendante'},
+  {code:'77',short:'Fermeture grappe',label:'Début fermeture de la grappe'},
+  {code:'79',short:'Grappes fermées',label:'Majorité des grappes fermées'},
+  {code:'81',short:'Début véraison',label:'Début de la véraison'},
+  {code:'85',short:'Ramollissement',label:'Ramollissement des baies'},
+  {code:'89',short:'Maturité',label:'Baies mûres – prêtes pour la récolte'},
+  {code:'91',short:'Aoûtement',label:'Après vendanges – aoûtement du bois'},
+  {code:'93',short:'Chute feuilles',label:'Début de la chute des feuilles'},
+  {code:'97',short:'Défeuillé',label:'Chute complète des feuilles'},
+];
+
+const SYS_PROMPT=`Tu es l'assistant de Florent Miguel, consultant viticole indépendant VITI Sens (Reims, Champagne).
+Tu transformes ses notes de terrain (saisies ou dictées) et photos en compte-rendu structuré.
+
+DICTÉE iOS — corrige intelligemment :
+"Pino" → "Pinot", "phi technologique" → "phénologique", "mille doux" → "mildiou", "oh idéum" → "oïdium", "botritis" → "botrytis", "black rote" → "black-rot", "essca" → "esca", "flavescence d'orée" → "flavescence dorée", "Iron"/"rumeur" (adventice) → "rumex", "Bagiolini" → "Baggiolini".
+Ignore les jurons/frustrations captés par erreur.
+
+PHOTOS : fais confiance en priorité aux photos pour identifier stades, symptômes, couvert.
+
+RÈGLES :
+- N'invente RIEN d'absent du texte corrigé ET des photos. null si non couvert.
+- Vocabulaire champenois précis : BBCH, Baggiolini, AMM, ITK, IFT.
+- Ton factuel, synthétique, professionnel.
+- Recommandations concrètes et datées si possible.
+- EXCLUSIVEMENT un JSON valide. Pas de texte avant/après. Commence par {.
+
+SCHÉMA :
+{
+  "synthese": "string (1-2 phrases)",
+  "phenologie": { "stade_bbch": "string|null", "stade_baggiolini": "string|null", "homogeneite": "string|null" },
+  "vigueur": "string|null",
+  "sanitaire": { "mildiou": "string|null", "oidium": "string|null", "botrytis": "string|null", "black_rot": "string|null", "autres_maladies": "string|null", "ravageurs": "string|null" },
+  "climatique": "string|null",
+  "sol_couvert": "string|null",
+  "autres_constats": "string|null",
+  "recommandations": ["string"],
+  "interventions": ["string"]
+}`;
+
+// ═══ STATE ═══
+const S={screen:'home',current:null,history:[],parcelles:[],lastClient:null,busy:false,error:null,bbchOpen:false,bbchQ:'',cepageOpen:false,parcelleOpen:false};
+
+// ═══ STORAGE (localStorage) ═══
+function lsGet(k){try{const v=localStorage.getItem('vs_'+k);return v?JSON.parse(v):null}catch{return null}}
+function lsSet(k,v){try{localStorage.setItem('vs_'+k,JSON.stringify(v))}catch{}}
+function lsDel(k){try{localStorage.removeItem('vs_'+k)}catch{}}
+function loadHistory(){
+  const keys=[];
+  for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.startsWith('vs_obs:'))keys.push(k)}
+  const items=[];
+  for(const k of keys){try{const v=JSON.parse(localStorage.getItem(k));if(v)items.push(v)}catch{}}
+  items.sort((a,b)=>b.createdAt.localeCompare(a.createdAt));
+  return items;
+}
+
+// ═══ UTILS ═══
+function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function fmtDate(iso){const d=new Date(iso);return d.toLocaleDateString('fr-FR',{day:'2-digit',month:'short',year:'numeric'})+' · '+d.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}
+
+function newObs(){
+  return{
+    id:'obs_'+Date.now().toString(36),createdAt:new Date().toISOString(),
+    parcelle:'',commune:'',cepage:'',bbch:null,meteo:'',
+    client:S.lastClient?{...S.lastClient}:{nom:'',email:''},
+    notes:'',photos:[],structured:null
+  };
+}
+
+function compressImage(file,maxDim=960,quality=0.6){
+  return new Promise((res,rej)=>{
+    const reader=new FileReader();
+    reader.onerror=rej;
+    reader.onload=()=>{
+      const img=new Image();img.onerror=rej;
+      img.onload=()=>{
+        const c=document.createElement('canvas');
+        let{width:w,height:h}=img;
+        if(w>maxDim||h>maxDim){const s=Math.min(maxDim/w,maxDim/h);w=Math.round(w*s);h=Math.round(h*s)}
+        c.width=w;c.height=h;c.getContext('2d').drawImage(img,0,0,w,h);
+        res(c.toDataURL('image/jpeg',quality));
+      };
+      img.src=reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+function extractJson(text){
+  try{return JSON.parse(text)}catch{}
+  let c=text.replace(/```(?:json)?\s*/gi,'').replace(/```/g,'').trim();
+  try{return JSON.parse(c)}catch{}
+  const f=c.indexOf('{'),l=c.lastIndexOf('}');
+  if(f!==-1&&l>f)try{return JSON.parse(c.substring(f,l+1))}catch{}
+  throw new Error('Réponse IA invalide');
+}
+
+function showToast(msg){
+  const old=document.querySelector('.toast');if(old)old.remove();
+  const t=document.createElement('div');t.className='toast';t.textContent=msg;
+  document.body.appendChild(t);setTimeout(()=>t.remove(),2200);
+}
+
+function saveCurrent(){
+  const o=S.current;if(!o)return;
+  lsSet('obs:'+o.id,o);
+  if(o.parcelle&&!S.parcelles.some(p=>p.toLowerCase()===o.parcelle.toLowerCase())){
+    S.parcelles=[...S.parcelles,o.parcelle].sort((a,b)=>a.localeCompare(b,'fr'));
+    lsSet('parcelles',S.parcelles);
+  }
+  if(o.client&&o.client.nom){S.lastClient=o.client;lsSet('lastClient',o.client)}
+  S.history=loadHistory();
+}
+
+// ═══ RENDER ═══
+function render(){
+  const app=document.getElementById('app');
+  let h=`<header class="brand"><div><div class="logo"><b>VITI</b> <em>Sens</em></div><div class="tagline">Carnet de terrain</div></div></header>`;
+  if(S.screen==='home')h+=renderHome();
+  else if(S.screen==='edit')h+=renderEdit();
+  else if(S.screen==='report')h+=renderReport();
+  app.innerHTML=h;
+  bind();
+}
+
+// ─── HOME ───
+function renderHome(){
+  let h=`<h1>Visites de <em>parcelles</em></h1>
+  <p class="subtitle">Note, photographie, transmets. Tes observations structurées automatiquement.</p>
+  <button class="btn btn-p" id="btn-new">＋ Nouvelle observation</button>
+  <div class="ornament">Historique</div>`;
+  if(!S.history.length){
+    h+=`<div class="empty-state"><div class="empty-icon">∽</div><div>Aucune observation enregistrée.</div><div style="font-size:13px;margin-top:6px">Démarre ta première visite.</div></div>`;
+  } else {
+    for(const o of S.history){
+      h+=`<div class="hist-item" data-id="${o.id}"><div style="flex:1"><div class="hist-name">${esc(o.parcelle||'Parcelle sans nom')}</div><div class="hist-meta">${fmtDate(o.createdAt)}${o.client&&o.client.nom?' · '+esc(o.client.nom):''}${o.photos&&o.photos.length?' · '+o.photos.length+' 📷':''}${o.structured?' · ✓ structuré':''}</div></div><span class="hist-arrow">›</span></div>`;
+    }
+  }
+  return h;
+}
+
+// ─── EDIT ───
+function renderEdit(){
+  const o=S.current;if(!o)return'';
+  let h=`<div class="top-bar"><button class="back-btn" id="btn-back">‹ Retour</button><button class="save-btn" id="btn-save">Sauver</button></div>`;
+  if(S.error)h+=`<div class="error">${esc(S.error)}</div>`;
+  h+=`<h1>Nouvelle <em>observation</em></h1>`;
+
+  // Identification
+  h+=`<div class="card"><h3>Identification</h3>
+  <div class="field"><label>Parcelle / Lieu-dit</label><input type="text" id="f-parcelle" value="${esc(o.parcelle)}" placeholder="Ex. Les Murgiers" autocomplete="off"></div>`;
+  if(S.parcelleOpen&&S.parcelles.filter(p=>p.toLowerCase().includes((o.parcelle||'').toLowerCase())).length){
+    const fp=S.parcelles.filter(p=>p.toLowerCase().includes((o.parcelle||'').toLowerCase()));
+    h+=`<div class="drop">${fp.map(p=>`<button data-parc="${esc(p)}">${esc(p)}</button>`).join('')}</div>`;
+  }
+  h+=`<div class="hint">Nouvelles parcelles ajoutées automatiquement</div>`;
+
+  h+=`<div class="row"><div class="field"><label>Commune</label><input type="text" id="f-commune" value="${esc(o.commune)}" placeholder="Ex. Avize" autocomplete="off"></div>
+  <div class="field"><label>Cépage</label><div class="sel-btn${o.cepage?'':' empty'}" id="btn-cepage">${o.cepage||'—'} <span style="font-size:11px">▾</span></div>`;
+  if(S.cepageOpen){
+    h+=`<div class="drop">${CEPAGES.map(c=>`<button data-cep="${c}" class="${o.cepage===c?'active':''}">${c}${o.cepage===c?' ✓':''}</button>`).join('')}</div>`;
+  }
+  h+=`</div></div>`;
+
+  h+=`<div class="row"><div class="field"><label>Client</label><input type="text" id="f-client" value="${esc(o.client.nom)}" placeholder="Nom du vigneron" autocomplete="off"></div>
+  <div class="field"><label>Email client</label><input type="email" id="f-email" value="${esc(o.client.email)}" placeholder="adresse@mail.fr" autocomplete="off" autocapitalize="off"></div></div></div>`;
+
+  // BBCH
+  h+=`<div class="card"><h3>Stade phénologique</h3>`;
+  if(o.bbch){
+    h+=`<div class="bbch-sel"><div style="flex:1"><span class="bbch-code">BBCH ${o.bbch.code}</span> <span style="font-size:14px;margin-left:8px">${esc(o.bbch.short)}</span><div style="font-size:12px;color:var(--ink-faint);margin-top:2px">${esc(o.bbch.label)}</div></div><button class="bbch-x" id="bbch-clear">×</button></div>`;
+  }
+  h+=`<button class="btn btn-s" id="btn-bbch">${S.bbchOpen?'Fermer':o.bbch?'Changer le stade':'Sélectionner le stade BBCH'}</button>`;
+  if(S.bbchOpen){
+    const fb=BBCH.filter(b=>`${b.code} ${b.label} ${b.short}`.toLowerCase().includes(S.bbchQ.toLowerCase()));
+    h+=`<div class="bbch-panel"><input type="text" id="f-bbch-q" value="${esc(S.bbchQ)}" placeholder="🔎 Rechercher…" style="margin-bottom:6px;font-size:13px"><div class="bbch-scroll">${fb.map(b=>`<button class="bbch-item${o.bbch&&o.bbch.code===b.code?' active':''}" data-bbch="${b.code}"><span class="bbch-ic">${b.code}</span><div style="flex:1"><div style="font-size:13px;font-weight:600">${esc(b.short)}</div><div style="font-size:10px;opacity:.6">${esc(b.label)}</div></div></button>`).join('')}</div></div>`;
+  }
+  h+=`</div>`;
+
+  // Météo
+  h+=`<div class="card"><h3>Météo</h3><div class="meteo-row">${METEOS.map(m=>`<button class="meteo-btn${o.meteo===m?' active':''}" data-meteo="${esc(m)}">${m}</button>`).join('')}</div></div>`;
+
+  // Observations
+  h+=`<div class="card"><h3><span>Observations terrain</span><span class="badge">${(o.notes||'').length} car.</span></h3>
+  <div class="dict-hint"><div class="dict-icon">🎤</div><div class="dict-text"><b>Pour dicter :</b> tape dans le champ, puis appuie sur le micro 🎤 du clavier iPhone. Parle naturellement.</div></div>
+  <div class="ta-wrap"><textarea id="f-notes" placeholder="Ex. Parcelle Les Murgiers, chardonnay, BBCH 17. Légère présence mildiou…">${esc(o.notes)}</textarea></div>
+  <div class="hint">Le texte sera structuré automatiquement par l'IA</div></div>`;
+
+  // Photos
+  h+=`<div class="card"><h3><span>Photos de terrain</span><span class="badge">${o.photos.length}</span></h3><div class="photo-grid">`;
+  for(const p of o.photos){
+    h+=`<div class="photo-thumb" style="background-image:url('${p.dataUrl}')"><button class="rm" data-pid="${p.id}">×</button></div>`;
+  }
+  h+=`<label class="photo-add" for="f-photos">＋</label></div><input type="file" id="f-photos" accept="image/*" multiple><div class="hint">Symptômes, dégâts, stades. Analysées par l'IA.</div></div>`;
+
+  // Actions
+  if(S.busy){
+    h+=`<div class="card"><div class="loader"><div class="spinner"></div> Structuration en cours…</div></div>`;
+  } else {
+    h+=`<button class="btn btn-p" id="btn-struct" ${!o.notes.trim()&&!o.photos.length?'disabled':''}>Structurer le compte-rendu</button>`;
+  }
+
+  // Envoi brut
+  h+=`<button class="btn btn-s" id="btn-raw-send" style="margin-top:8px">✉ Envoyer les notes brutes par email</button>`;
+  return h;
+}
+
+// ─── REPORT ───
+function renderReport(){
+  const o=S.current;if(!o)return'';
+  const s=o.structured||{};
+  let h=`<button class="back-btn" id="btn-back">‹ Retour à l'accueil</button>`;
+  h+=`<h1>Compte-rendu de <em>visite</em></h1>`;
+  h+=`<div class="meta-bar"><div class="meta-who">${esc(o.parcelle||'Parcelle')}${o.commune?' · '+esc(o.commune):''}${o.cepage?' · '+esc(o.cepage):''}</div><div class="meta-when">${fmtDate(o.createdAt)}</div></div>`;
+
+  if(s.synthese)h+=`<div class="synth-card"><div class="synth-label">Synthèse</div><div class="synth-content">${esc(s.synthese)}</div></div>`;
+
+  if(s.phenologie&&(s.phenologie.stade_bbch||s.phenologie.stade_baggiolini)){
+    h+=`<div class="card"><div class="rpt-label">Phénologie</div><div class="sub-grid"><div><span class="sub-k">BBCH</span><span class="sub-v">${esc(s.phenologie.stade_bbch||'—')}</span></div><div><span class="sub-k">Baggiolini</span><span class="sub-v">${esc(s.phenologie.stade_baggiolini||'—')}</span></div></div>${s.phenologie.homogeneite?`<div style="margin-top:8px;font-size:14px">${esc(s.phenologie.homogeneite)}</div>`:''}</div>`;
+  }
+  if(s.vigueur)h+=secCard('Vigueur / Végétation',s.vigueur);
+
+  const san=s.sanitaire||{};
+  const si=[];
+  if(san.mildiou)si.push(['Mildiou',san.mildiou]);if(san.oidium)si.push(['Oïdium',san.oidium]);
+  if(san.botrytis)si.push(['Botrytis',san.botrytis]);if(san.black_rot)si.push(['Black-rot',san.black_rot]);
+  if(san.autres_maladies)si.push(['Autres',san.autres_maladies]);if(san.ravageurs)si.push(['Ravageurs',san.ravageurs]);
+  if(si.length){
+    h+=`<div class="card"><div class="rpt-label">État sanitaire</div>${si.map(([k,v])=>`<div class="san-item"><span class="san-k">${esc(k)}</span><div class="san-v">${esc(v)}</div></div>`).join('')}</div>`;
+  }
+  if(s.climatique)h+=secCard('Dégâts climatiques',s.climatique);
+  if(s.sol_couvert)h+=secCard('Sol & couvert végétal',s.sol_couvert);
+  if(s.autres_constats)h+=secCard('Autres constats',s.autres_constats);
+  if(s.recommandations&&s.recommandations.length){
+    h+=`<div class="card"><div class="rpt-label">Recommandations</div>${s.recommandations.map((r,i)=>`<div class="rpt-li"><span class="rpt-li-n">${i+1}</span>${esc(r)}</div>`).join('')}</div>`;
+  }
+  if(s.interventions&&s.interventions.length){
+    h+=`<div class="card"><div class="rpt-label">Interventions suggérées</div>${s.interventions.map((r,i)=>`<div class="rpt-li"><span class="rpt-li-n">${i+1}</span>${esc(r)}</div>`).join('')}</div>`;
+  }
+  if(o.photos.length){
+    h+=`<div class="card"><h3>Photos jointes</h3><div class="photo-grid">${o.photos.map(p=>`<div class="photo-thumb" style="background-image:url('${p.dataUrl}')"></div>`).join('')}</div></div>`;
+  }
+
+  h+=`<div class="btn-row"><button class="btn btn-s" id="btn-edit">Modifier</button><button class="btn btn-p" id="btn-send">✉ Envoyer</button></div>`;
+  h+=`<button class="btn btn-d" id="btn-delete">Supprimer cette observation</button>`;
+  return h;
+}
+
+function secCard(label,content){return`<div class="card"><div class="rpt-label">${esc(label)}</div><div class="rpt-content">${esc(content)}</div></div>`}
+
+// ═══ BINDINGS ═══
+function bind(){
+  const $=id=>document.getElementById(id);
+
+  // HOME
+  if(S.screen==='home'){
+    $('btn-new')?.addEventListener('click',()=>{S.current=newObs();S.screen='edit';S.error=null;S.bbchOpen=false;S.bbchQ='';S.cepageOpen=false;S.parcelleOpen=false;render()});
+    document.querySelectorAll('.hist-item').forEach(el=>el.addEventListener('click',()=>{
+      const o=S.history.find(x=>x.id===el.dataset.id);
+      if(o){S.current=JSON.parse(JSON.stringify(o));S.screen=o.structured?'report':'edit';S.error=null;S.bbchOpen=false;render()}
+    }));
+  }
+
+  // EDIT
+  if(S.screen==='edit'){
+    $('btn-back')?.addEventListener('click',()=>{S.screen='home';S.error=null;render()});
+    $('btn-save')?.addEventListener('click',()=>{syncFields();saveCurrent();showToast('Enregistré ✓');S.screen='home';render()});
+    $('f-parcelle')?.addEventListener('input',e=>{S.current.parcelle=e.target.value;S.parcelleOpen=true;render();$('f-parcelle')?.focus()});
+    $('f-parcelle')?.addEventListener('focus',()=>{S.parcelleOpen=true;render();$('f-parcelle')?.focus()});
+    $('f-parcelle')?.addEventListener('blur',()=>setTimeout(()=>{S.parcelleOpen=false;render()},200));
+    document.querySelectorAll('[data-parc]').forEach(b=>b.addEventListener('mousedown',e=>{e.preventDefault();S.current.parcelle=b.dataset.parc;S.parcelleOpen=false;render()}));
+    $('f-commune')?.addEventListener('input',e=>S.current.commune=e.target.value);
+    $('btn-cepage')?.addEventListener('click',()=>{S.cepageOpen=!S.cepageOpen;render()});
+    document.querySelectorAll('[data-cep]').forEach(b=>b.addEventListener('click',()=>{S.current.cepage=b.dataset.cep;S.cepageOpen=false;render()}));
+    $('f-client')?.addEventListener('input',e=>S.current.client.nom=e.target.value);
+    $('f-email')?.addEventListener('input',e=>S.current.client.email=e.target.value);
+    $('btn-bbch')?.addEventListener('click',()=>{S.bbchOpen=!S.bbchOpen;S.bbchQ='';render()});
+    $('bbch-clear')?.addEventListener('click',()=>{S.current.bbch=null;render()});
+    $('f-bbch-q')?.addEventListener('input',e=>{S.bbchQ=e.target.value;render();$('f-bbch-q')?.focus()});
+    document.querySelectorAll('[data-bbch]').forEach(b=>b.addEventListener('click',()=>{
+      S.current.bbch=BBCH.find(x=>x.code===b.dataset.bbch)||null;S.bbchOpen=false;S.bbchQ='';render();
+    }));
+    document.querySelectorAll('[data-meteo]').forEach(b=>b.addEventListener('click',()=>{
+      S.current.meteo=S.current.meteo===b.dataset.meteo?'':b.dataset.meteo;render();
+    }));
+    $('f-notes')?.addEventListener('input',e=>{S.current.notes=e.target.value;const badge=document.querySelector('.card h3 .badge');if(badge)badge.textContent=e.target.value.length+' car.'});
+    $('f-photos')?.addEventListener('change',async e=>{
+      for(const f of Array.from(e.target.files)){
+        try{const du=await compressImage(f);S.current.photos.push({id:'p_'+Date.now()+Math.random().toString(36).slice(2,5),dataUrl:du})}catch(err){console.error(err)}
+      }
+      e.target.value='';render();
+    });
+    document.querySelectorAll('[data-pid]').forEach(b=>b.addEventListener('click',e=>{
+      e.stopPropagation();S.current.photos=S.current.photos.filter(p=>p.id!==b.dataset.pid);render();
+    }));
+    $('btn-struct')?.addEventListener('click',()=>{syncFields();doStructure()});
+    $('btn-raw-send')?.addEventListener('click',()=>{syncFields();saveCurrent();sendEmail()});
+  }
+
+  // REPORT
+  if(S.screen==='report'){
+    $('btn-back')?.addEventListener('click',()=>{S.screen='home';render()});
+    $('btn-edit')?.addEventListener('click',()=>{S.screen='edit';S.bbchOpen=false;render()});
+    $('btn-send')?.addEventListener('click',()=>sendEmail());
+    $('btn-delete')?.addEventListener('click',()=>{
+      if(!confirm('Supprimer définitivement ?'))return;
+      lsDel('obs:'+S.current.id);S.history=loadHistory();S.screen='home';render();showToast('Supprimé');
+    });
+  }
+}
+
+function syncFields(){
+  const o=S.current;if(!o)return;
+  const v=id=>{const el=document.getElementById(id);return el?el.value:''};
+  o.parcelle=v('f-parcelle');o.commune=v('f-commune');
+  o.client.nom=v('f-client');o.client.email=v('f-email');
+  o.notes=v('f-notes');
+}
+
+// ═══ STRUCTURATION IA ═══
+async function doStructure(){
+  const o=S.current;
+  if(!o.notes.trim()&&!o.photos.length){S.error='Saisis tes notes ou ajoute une photo.';render();return}
+  S.busy=true;S.error=null;render();
+
+  const parts=[`Notes de terrain — ${fmtDate(o.createdAt)}`];
+  if(o.parcelle)parts.push(`Parcelle : ${o.parcelle}${o.commune?' ('+o.commune+')':''}`);
+  if(o.cepage)parts.push(`Cépage : ${o.cepage}`);
+  if(o.bbch)parts.push(`Stade BBCH estimé : ${o.bbch.code} – ${o.bbch.label}`);
+  if(o.meteo)parts.push(`Météo : ${o.meteo}`);
+  parts.push('','NOTES :',o.notes||'(aucune note — uniquement photos)');
+  if(o.photos.length)parts.push('',o.photos.length+' photo(s) jointe(s).');
+  parts.push('','Produis le CR structuré en JSON.');
+
+  const content=[{type:'text',text:SYS_PROMPT+'\n\n———\n\n'+parts.join('\n')}];
+  for(const p of o.photos){
+    const b64=p.dataUrl.split(',')[1];
+    content.push({type:'image',source:{type:'base64',media_type:'image/jpeg',data:b64}});
+  }
+
+  try{
+    const resp=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content}]})
+    });
+    const raw=await resp.text();
+    let data;try{data=JSON.parse(raw)}catch{data=null}
+    if(!resp.ok)throw new Error(data?.error?.message||'HTTP '+resp.status);
+    const text=data.content.filter(b=>b.type==='text').map(b=>b.text).join('\n').trim();
+    if(!text)throw new Error('Réponse vide');
+    S.current.structured=extractJson(text);
+    saveCurrent();S.screen='report';
+  }catch(e){
+    S.error='Structuration impossible — '+(e.message||String(e));
+    window.scrollTo(0,0);
+  }finally{S.busy=false;render()}
+}
+
+// ═══ EMAIL ═══
+function sendEmail(){
+  const o=S.current;if(!o)return;
+  const s=o.structured;
+  const L=[];
+  L.push('COMPTE-RENDU DE VISITE PARCELLAIRE','VITI Sens — Conseil viticole indépendant','');
+  L.push('Date : '+fmtDate(o.createdAt));
+  if(o.parcelle)L.push('Parcelle : '+o.parcelle+(o.commune?' ('+o.commune+')':''));
+  if(o.cepage)L.push('Cépage : '+o.cepage);
+  if(o.bbch)L.push('Stade BBCH : '+o.bbch.code+' – '+o.bbch.label);
+  if(o.meteo)L.push('Météo : '+o.meteo);
+  if(o.client&&o.client.nom)L.push('Client : '+o.client.nom);
+  L.push('','───────────────────────','');
+
+  if(!s){
+    L.push('OBSERVATIONS TERRAIN','',o.notes||'(à compléter)','');
+  } else {
+    if(s.synthese){L.push('SYNTHÈSE',s.synthese,'')}
+    const ph=s.phenologie;
+    if(ph&&(ph.stade_bbch||ph.stade_baggiolini)){
+      L.push('PHÉNOLOGIE');
+      if(ph.stade_bbch)L.push('• BBCH : '+ph.stade_bbch);
+      if(ph.stade_baggiolini)L.push('• Baggiolini : '+ph.stade_baggiolini);
+      if(ph.homogeneite)L.push('• Homogénéité : '+ph.homogeneite);
+      L.push('');
+    }
+    if(s.vigueur){L.push('VIGUEUR',s.vigueur,'')}
+    const san=s.sanitaire||{};const sl=[];
+    if(san.mildiou)sl.push('• Mildiou : '+san.mildiou);if(san.oidium)sl.push('• Oïdium : '+san.oidium);
+    if(san.botrytis)sl.push('• Botrytis : '+san.botrytis);if(san.black_rot)sl.push('• Black-rot : '+san.black_rot);
+    if(san.autres_maladies)sl.push('• Autres : '+san.autres_maladies);if(san.ravageurs)sl.push('• Ravageurs : '+san.ravageurs);
+    if(sl.length){L.push('ÉTAT SANITAIRE',...sl,'')}
+    if(s.climatique)L.push('CLIMAT',s.climatique,'');
+    if(s.sol_couvert)L.push('SOL / COUVERT',s.sol_couvert,'');
+    if(s.autres_constats)L.push('AUTRES',s.autres_constats,'');
+    if(s.recommandations&&s.recommandations.length){L.push('RECOMMANDATIONS');s.recommandations.forEach((r,i)=>L.push((i+1)+'. '+r));L.push('')}
+    if(s.interventions&&s.interventions.length){L.push('INTERVENTIONS');s.interventions.forEach((r,i)=>L.push((i+1)+'. '+r));L.push('')}
+  }
+  L.push('───────────────────────','Florent Miguel · VITI Sens','Conseil technico-économique en viticulture · Reims');
+  if(o.photos.length)L.push('\n('+o.photos.length+' photo(s) à joindre depuis l\'app Photos)');
+
+  const subject='CR VITI Sens — '+(o.parcelle||'visite')+' — '+new Date(o.createdAt).toLocaleDateString('fr-FR');
+  const to=o.client&&o.client.email?o.client.email:'';
+  window.location.href='mailto:'+encodeURIComponent(to)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(L.join('\n'));
+}
+
+// ═══ INIT ═══
+(function(){
+  S.lastClient=lsGet('lastClient');
+  S.parcelles=lsGet('parcelles')||[];
+  S.history=loadHistory();
+  render();
+})();
+</script>
+</body>
+</html>
